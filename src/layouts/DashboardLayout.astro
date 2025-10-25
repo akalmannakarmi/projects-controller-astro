@@ -1,0 +1,20 @@
+---
+import Sidebar from "../components/Sidebar.jsx";
+import Navbar from "../components/ui/Navbar.astro";
+import "../styles/global.css"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <title>Dashboard</title>
+  </head>
+  <body class="flex min-h-screen bg-gray-100 text-gray-800">
+    <Sidebar client:load/>
+    <main class="flex-1 p-6">
+      <slot /> <!-- Page content goes here -->
+    </main>
+  </body>
+</html>
