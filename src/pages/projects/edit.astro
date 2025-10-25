@@ -1,0 +1,9 @@
+---
+import DashboardLayout from '../../layouts/DashboardLayout.astro';
+import ProjectEditForm from '../../components/ProjectEditForm.jsx';
+const { id } = Astro.params;
+---
+
+<DashboardLayout>
+  <ProjectEditForm projectId={id} client:load />
+</DashboardLayout>
