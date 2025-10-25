@@ -1,0 +1,12 @@
+---
+import Switch from "./ui/Switch.astro";
+const { project } = Astro.props;
+---
+
+<div class="flex justify-between items-center bg-white p-4 rounded-xl shadow">
+  <div>
+    <h3 class="font-semibold">{project.name}</h3>
+    <p class="text-sm text-gray-500">{project.description}</p>
+  </div>
+  <Switch id={project.id} checked={project.active} />
+</div>
