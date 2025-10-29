@@ -74,7 +74,7 @@ async function fetchWithAuth(url, options = {}) {
 // PROJECT ENDPOINTS
 
 export async function createProject({ name, instanceId }) {
-  const res = await fetchWithAuth(`${API_URL}/project`, {
+  const res = await fetchWithAuth(`${API_URL}/project/`, {
     method: "POST",
     body: JSON.stringify({ name, instanceId }),
   });
@@ -92,7 +92,7 @@ export async function updateProject(id, { name, instanceId }) {
 }
 
 export async function getProjects() {
-  const res = await fetchWithAuth(`${API_URL}/project?skip=0&limit=20`);
+  const res = await fetchWithAuth(`${API_URL}/project/?skip=0&limit=20`);
   return await res.json();
 }
 
