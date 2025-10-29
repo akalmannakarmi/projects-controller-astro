@@ -1,5 +1,4 @@
-
-const API_URL = "http://localhost:8000/api/v1"; // change to your backend URL
+const API_URL = import.meta.env.PUBLIC_API_URL || "http://localhost:8000/api/v1";
 
 export async function login(email, password) {
   const res = await fetch(`${API_URL}/auth/login`, {
